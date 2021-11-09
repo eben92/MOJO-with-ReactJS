@@ -15,28 +15,68 @@ body {
 
 .App {
   display: flex;
+  /* width: 100%; */
 }
 /* top to down */
 
 /* sidebar */
+aside.side {
+  /* background: rgb(41, 41, 41);
+  width: 20vw;
+  height: 100vh; */
+  transition: all 0.5s linear;
+}
+
 .sideBar {
   background: rgb(41, 41, 41);
   width: 20vw;
-  height: 100%;
+  height: 100vh;
+  transition: all 0.5s linear;
+}
+
+.hide__sidebar {
+  width: 10vw;
 }
 
 /* navbar and navbar container */
 
+.log {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+
+  /* justify-content: center; */
+}
+
 .navBar__container {
+  padding: 20px;
   background-color: rgb(22, 22, 22);
   display: flex;
   align-items: center;
-  padding: 20px;
-  /* justify-content: center; */
+  justify-content: space-between;
+}
+
+.float {
+  cursor: pointer;
+  color: rgb(110, 110, 110);
+  transition: all 0.4s;
+}
+
+.float:hover {
+  transform: translate(-30%);
+  font-size: 20px;
+}
+
+#rotate__float {
+  transform: rotate(180deg);
 }
 
 /* .logo {
 } */
+
+.hide__log {
+  display: none;
+}
 
 .logo,
 .title {
@@ -68,6 +108,8 @@ body {
   text-transform: capitalize;
   text-decoration: none;
   font-size: 18px;
+  display: flex;
+  align-items: center;
 }
 /* end of navbar */
 
@@ -93,7 +135,7 @@ body {
   border: none;
   color: rgb(190, 190, 190);
   outline: none;
-  width: 13vw;
+  width: 60%;
 }
 
 .sidebar__search__btn {
@@ -122,7 +164,7 @@ body {
 
 /* main header */
 main {
-  width: 100%;
+  flex: 100 100;
 }
 
 .main__header__container {
@@ -273,4 +315,26 @@ main {
   font-weight: 800;
   color: rgb(92, 92, 92);
   /* padding: 10px; */
+}
+
+@media screen and (max-width: 668px) {
+  .sideBar {
+    width: 10vw;
+  }
+
+  .log {
+    display: none;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .links_title:not(.sidebar__icons) {
+    display: none;
+  }
+
+  .sidebar__icons {
+    font-size: 4rem;
+  }
 }

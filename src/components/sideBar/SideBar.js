@@ -1,5 +1,11 @@
 import React from "react";
-import { FaLeaf, FaSearch } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import {
+  FaLeaf,
+  FaSearch,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import Links from "./Routes/Links";
 
 // TODO LIST
@@ -7,13 +13,22 @@ import Links from "./Routes/Links";
 // use hooks
 
 const SideBar = () => {
+  const [min__sidebar, setMin__Sidebar] = useState(false);
+
   return (
     <>
       {/* sideBar */}
 
-      <div className='sideBar'>
+      <div className={`sideBar ${min__sidebar ? "hide__sidebar" : ""}`}>
         <div className='navBar__container'>
-          <FaLeaf className='logo' /> <h2 className='title'>mojo</h2>
+          <div className={`log ${min__sidebar ? "hide__log" : ""}`}>
+            <FaLeaf className='logo' /> <h2 className='title'>mojo</h2>
+          </div>
+          <FaChevronLeft
+            id={`${min__sidebar ? "rotate__float" : ""}`}
+            className='float'
+            onClick={() => setMin__Sidebar(!min__sidebar)}
+          />
         </div>
 
         <div className='search'>

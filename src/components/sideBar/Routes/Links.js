@@ -10,32 +10,38 @@ const Links = () => {
       <ul>
         <li className='sidebar__links'>
           <Link to='/' className='side__links'>
-            <AiOutlineHome className='sidebar__icons' /> dashboard
+            <AiOutlineHome className='sidebar__icons' />
+            <h5 className='side__links links_title'>dashboard</h5>
           </Link>
         </li>
         <li className='sidebar__links'>
           <Link to='/clients' className='side__links'>
-            <AiOutlineUser className='sidebar__icons' /> clients
+            <AiOutlineUser className='sidebar__icons' />
+            <h5 className='side__links links_title'>clients</h5>
           </Link>
         </li>
         <li className='sidebar__links'>
           <Link to='' className='side__links'>
-            <ImStack className='sidebar__icons' /> my documents
+            <ImStack className='sidebar__icons' />
+            <h5 className='side__links links_title'>my documents</h5>
           </Link>
         </li>
         <li className='sidebar__links'>
           <Link to='/cases' className='side__links'>
-            <IoFolderOutline className='sidebar__icons' /> cases
+            <IoFolderOutline className='sidebar__icons' />
+            <h5 className='side__links links_title'>cases</h5>
           </Link>
         </li>
         <li className='sidebar__links'>
           <Link to='/settings' className='side__links'>
-            <AiOutlineSetting className='sidebar__icons' /> settings
+            <AiOutlineSetting className='sidebar__icons' />
+            <h5 className='side__links links_title'>settings</h5>
           </Link>
         </li>
         <li className='sidebar__links'>
           <Link to='/logout' className='side__links'>
-            <IoLogOutOutline className='sidebar__icons' /> logout
+            <IoLogOutOutline className='sidebar__icons' />
+            <h5 className='side__links links_title'>logout</h5>
           </Link>
         </li>
       </ul>
